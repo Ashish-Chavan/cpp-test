@@ -473,11 +473,7 @@ QString wrapText(const QString &text, int initialIndentation = USAGE_TEXT_COLUMN
         {
             lines.last().append(u' ' + word);
         }
-        else
-        {
-            lines.append(QString(initialIndentation, u' ') + word);
-            currentLineMaxLength = wrapAtColumn;
-        }
+        
     }
 
     return lines.join(u'\n');
