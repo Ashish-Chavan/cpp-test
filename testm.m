@@ -18,8 +18,6 @@ void merge(int array[], int const left, int const mid,
     // Copy data to temp arrays leftArray[] and rightArray[]
     for (auto i = 0; i < subArrayOne; i++)
         leftArray[i] = array[left + i];
-    for (auto j = 0; j < subArrayTwo; j++)
-        rightArray[j] = array[mid + 1 + j];
 
     auto indexOfSubArrayOne = 0, indexOfSubArrayTwo = 0;
     int indexOfMergedArray = left;
@@ -84,18 +82,3 @@ void printArray(int A[], int size)
     cout << endl;
 }
 
-// Driver code
-int main()
-{
-    int arr[] = { 12, 11, 13, 5, 6, 7 };
-    int arr_size = sizeof(arr) / sizeof(arr[0]);
-
-    cout << "Given array is \n";
-    printArray(arr, arr_size);
-
-    mergeSort(arr, 0, arr_size - 1);
-
-    cout << "\nSorted array is \n";
-    printArray(arr, arr_size);
-    return 0;
-}
